@@ -1,0 +1,25 @@
+<root BTCPP_format="4" main_tree_to_execute="Open Gripper">
+  <!-- ////////// -->
+  <BehaviorTree
+    ID="Open Gripper"
+    _description="Open the gripper"
+    _favorite="false"
+  >
+    <Control ID="Sequence">
+      <Action
+        ID="LogMessage"
+        log_level="error"
+        message="This robot configuration does not have a gripper configured!"
+      />
+      <Action ID="AlwaysFailure" />
+    </Control>
+  </BehaviorTree>
+  <TreeNodesModel>
+    <SubTree ID="Open Gripper">
+      <MetadataFields>
+        <Metadata subcategory="Grasping" />
+        <Metadata runnable="false" />
+      </MetadataFields>
+    </SubTree>
+  </TreeNodesModel>
+</root>

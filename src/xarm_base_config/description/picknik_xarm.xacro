@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
+  <!-- parameters -->
+  <xacro:arg name="prefix" default=""/>
+  <xacro:arg name="hw_ns" default="xarm"/>
+  <xacro:arg name="limited" default="false"/>
+  <xacro:arg name="effort_control" default="false"/>
+  <xacro:arg name="velocity_control" default="false"/>
+  <xacro:arg name="add_gripper" default="false"/>
+  <xacro:arg name="add_vacuum_gripper" default="false"/>
+  <xacro:arg name="add_bio_gripper" default="false"/>
+  <xacro:arg name="dof" default="7"/>
+  <xacro:arg name="robot_ip" default=""/>
+  <xacro:arg name="robot_type" default="xarm"/>
+  <xacro:arg name="robot_sn" default=""/>
+  <xacro:arg name="report_type" default="normal"/>
+  <xacro:arg name="ros2_control_plugin" default="uf_robot_hardware/UFRobotSystemHardware"/>
+  <xacro:arg name="ros2_control_params" default=""/>
+  <xacro:arg name="add_realsense_d435i" default="false"/>
+  <xacro:arg name="add_d435i_links" default="true"/>
+  <xacro:arg name="use_gazebo_camera" default="false"/>
+  <xacro:arg name="attach_to" default="world"/>
+  <xacro:arg name="attach_xyz" default="0 0 0"/>
+  <xacro:arg name="attach_rpy" default="0 0 0"/>
+  <xacro:arg name="mesh_suffix" default="stl"/>
+  <xacro:arg name="kinematics_suffix" default=""/>
+
+  <xacro:include
+    filename="$(find xarm_base_config)/description/picknik_xarm_macro.xacro"
+  />
+
+  <!-- Robot: contains robot description from the world frame to the tool frame -->
+  <xacro:picknik_xarm
+    attach_to="world"
+  >
+  </xacro:picknik_xarm>
+</robot>
