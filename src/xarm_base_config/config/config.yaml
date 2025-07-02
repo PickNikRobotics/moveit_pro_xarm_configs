@@ -42,8 +42,8 @@ hardware:
   # [Required]
   robot_description:
     urdf:
-      package: "xarm_description"
-      path: "urdf/xarm_device.urdf.xacro"
+      package: "xarm_base_config"
+      path: "description/picknik_xarm.xacro"
     srdf:
       package: "xarm_moveit_config"
       path: "srdf/xarm.srdf.xacro"

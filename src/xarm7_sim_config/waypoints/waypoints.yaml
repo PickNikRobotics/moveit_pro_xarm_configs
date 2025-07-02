@@ -1,0 +1,39 @@
+- description: ''
+  favorite: true
+  joint_group_names:
+  - xarm7
+  joint_state:
+    effort: []
+    header:
+      frame_id: world
+      stamp:
+        nanosec: 0
+        sec: 0
+    name:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+    - joint6
+    - joint7
+    position:
+    - 0
+    - 0
+    - 0
+    - 1.5707963269715164
+    - 0
+    - 0.7853981636909314
+    - 0
+    velocity: []
+  multi_dof_joint_state:
+    header:
+      frame_id: ''
+      stamp:
+        nanosec: 0
+        sec: 0
+    joint_names: []
+    transforms: []
+    twist: []
+    wrench: []
+  name: Home
