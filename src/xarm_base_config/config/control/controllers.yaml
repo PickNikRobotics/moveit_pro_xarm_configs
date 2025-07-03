@@ -100,12 +100,9 @@ servo_controller:
 
 velocity_force_controller:
   ros__parameters:
-    planning_group_name: xarm7
+    planning_group_name: manipulator
     sensor_frame: link_eef
-    ee_frame: link_eef
-    # ft_sensor_name: tcp_fts_sensor
-    # ft_force_deadband: 2.0
-    # ft_torque_deadband: 1.0
+    ee_frame: link_pose_jog
     max_joint_velocity:
       - 0.524
       - 0.524
