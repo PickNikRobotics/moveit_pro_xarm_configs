@@ -1,5 +1,5 @@
 <mujoco model="xarm7 scene">
-  <include file="xarm7.xml" />
+  <include file="xarm7_globals.xml" />
 
   <compiler angle="radian" autolimits="true" />
   <option integrator="implicitfast" />
@@ -55,6 +55,7 @@
       resolution="640 480"
       euler="0.849 0.000 0.0"
     />
+    <include file="xarm7.xml" />
   </worldbody>
 
 </mujoco>

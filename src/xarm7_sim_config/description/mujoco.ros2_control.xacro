@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:macro name="xarm7_mujoco_ros2_control" params="prefix:='' mujoco_model mujoco_viewer:=false
+  <xacro:macro name="xarm7_mujoco_ros2_control" params="prefix:='' mujoco_model mujoco_model_package mujoco_viewer:=false
     joint1_lower_limit:=${-2.0*pi}  joint1_upper_limit:=${2.0*pi}
     joint2_lower_limit:=${-2.059}  joint2_upper_limit:=${2.0944}
     joint3_lower_limit:=${-2.0*pi}  joint3_upper_limit:=${2.0*pi}
@@ -13,7 +13,7 @@
       <hardware>
           <plugin>picknik_mujoco_ros/MujocoSystem</plugin>
           <param name="mujoco_model">${mujoco_model}</param>
-          <param name="mujoco_model_package">xarm7_sim_config</param>
+          <param name="mujoco_model_package">${mujoco_model_package}</param>
           <param name="render_publish_rate">20</param>
           <param name="tf_publish_rate">60</param>
           <param name="mujoco_viewer">${mujoco_viewer}</param>

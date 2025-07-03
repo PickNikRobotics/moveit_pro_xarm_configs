@@ -42,7 +42,7 @@
   <xacro:if value="$(arg launch_mujoco)">
     <xacro:include filename="$(find xarm7_sim_config)/description/mujoco.ros2_control.xacro" />
     <xacro:xarm7_mujoco_ros2_control
-      mujoco_model="description/mujoco/scene.xml" mujoco_viewer="false"
+      mujoco_model="description/mujoco/scene.xml" mujoco_viewer="false" mujoco_model_package="xarm7_sim_config"
     />    
   </xacro:if>
 </robot>
