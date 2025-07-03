@@ -19,7 +19,6 @@ hardware:
       - name: "xarm7"
       - dof: "7"
       - robot_type: "xarm"
-      - add_gripper: "true"
 
 # Configuration for launching xarm_base_config processes.
 # [Required, if using xarm_base_config]
@@ -34,7 +33,6 @@ ros2_control:
   controllers_active_at_startup:
     - "joint_state_broadcaster"
     - "joint_trajectory_controller"
-    - "gripper_controller"
   # Load but do not start these controllers so they can be activated later if needed.
   # [Optional, default=[]]
   controllers_inactive_at_startup:
@@ -64,9 +62,9 @@ objectives:
   # Specify source folder for objectives
   # [Required]
   objective_library_paths:
-    simulation_objectives:
-      package_name: "xarm7_config"
-      relative_path: "objectives"
+    base_objectives:
+      package_name: "xarm_base_config"
+      relative_path: "objectives"    
   # Specify the location of the saved waypoints file.
   # [Required]
   waypoints_file:

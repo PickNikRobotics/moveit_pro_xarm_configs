@@ -68,8 +68,8 @@ objectives:
   # Specify source folder for objectives
   # [Required]
   objective_library_paths:
-    simulation_objectives:
-      package_name: "xarm7_config"
+    base_objectives:
+      package_name: "xarm_base_config"
       relative_path: "objectives"
   # Specify the location of the saved waypoints file.
   # [Required]

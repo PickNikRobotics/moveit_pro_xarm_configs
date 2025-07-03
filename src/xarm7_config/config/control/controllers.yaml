@@ -8,9 +8,7 @@ controller_manager:
     servo_controller:
       type: joint_trajectory_controller/JointTrajectoryController
     velocity_force_controller:
-      type: velocity_force_controller/VelocityForceController      
-    gripper_controller:
-      type: position_controllers/GripperActionController
+      type: velocity_force_controller/VelocityForceController
 
 joint_trajectory_controller:
   ros__parameters:
@@ -138,11 +136,3 @@ velocity_force_controller:
       - 40.0
       - 40.0
       - 40.0
-
-gripper_controller:
-  ros__parameters:
-    default: true
-    joint: drive_joint
-    allow_stalling: true
-    stall_timeout: 0.05
-    goal_tolerance: 0.02
