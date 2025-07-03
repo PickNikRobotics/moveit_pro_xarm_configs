@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:macro
     name="picknik_xarm"
-    params="attach_to launch_ros2_control"
+    params="attach_to attach_xyz:='0 0 0' attach_rpy:='0 0 0' launch_ros2_control"
   >
     <!-- parameters -->
     <xacro:arg name="prefix" default=""/>
