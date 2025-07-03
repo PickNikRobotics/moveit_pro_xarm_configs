@@ -1,28 +1,5 @@
 <mujoco model="xarm7">
-  <compiler angle="radian" meshdir="assets" autolimits="true" />
-  <option integrator="implicitfast" />
 
-  <asset>
-    <mesh name="link_base" file="link_base.stl"/>
-    <mesh name="link1" file="link1.stl"/>
-    <mesh name="link2" file="link2.stl"/>
-    <mesh name="link3" file="link3.stl"/>
-    <mesh name="link4" file="link4.stl"/>
-    <mesh name="link5" file="link5.stl"/>
-    <mesh name="link6" file="link6.stl"/>
-    <mesh name="end_tool" file="end_tool.stl"/>
-  </asset>
-
-  <actuator>
-    <position joint="joint1" name="joint1" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-    <position joint="joint2" name="joint2" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-    <position joint="joint3" name="joint3" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-    <position joint="joint4" name="joint4" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-    <position joint="joint5" name="joint5" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-    <position joint="joint6" name="joint6" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-    <position joint="joint7" name="joint7" ctrlrange="-3.14 3.14" kp="1000" forcelimited="false" dampratio="1"/>
-  </actuator>
-  <worldbody>
     <geom type="mesh" rgba="1 1 1 1" mesh="link_base"/>
     <body name="link1" pos="0 0 0.267" gravcomp="1">
       <joint name="joint1" pos="0 0 0" axis="0 0 1" range="-6.28319 6.28319" actuatorfrcrange="-50 50" damping="10" frictionloss="1"/>
@@ -66,5 +43,4 @@
         </body>
       </body>
     </body>
-  </worldbody>
 </mujoco>
