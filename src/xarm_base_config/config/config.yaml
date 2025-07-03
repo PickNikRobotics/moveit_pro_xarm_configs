@@ -45,8 +45,8 @@ hardware:
       package: "xarm_base_config"
       path: "description/picknik_xarm.xacro"
     srdf:
-      package: "xarm_moveit_config"
-      path: "srdf/xarm.srdf.xacro"
+      package: "xarm_base_config"
+      path: "config/moveit/xarm.srdf.xacro"
     # Specify any additional parameters required for the URDF.
     # Many of these are specific to the UR descriptions packages, and can be customized as needed.
     # [Optional]

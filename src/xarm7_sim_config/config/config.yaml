@@ -19,37 +19,8 @@ hardware:
       package: "xarm7_sim_config"
       path: "description/picknik_xarm.xacro"
     urdf_params:
-      - name: "xarm7"
-      - dof: "7"
-      - robot_type: "xarm"
-      - add_gripper: "false"
       - launch_ros2_control: "false"
       - launch_mujoco: "true"
-
-# Configuration for launching xarm_base_config processes.
-# [Required, if using xarm_base_config]
-ros2_control:
-  config:
-    package: "xarm7_config"
-    path: "config/control/controllers.yaml"
-  # MoveIt Pro will load and activate these controllers at start up to ensure they are available.
-  # If not specified, it is up to the user to ensure the appropriate controllers are active and available
-  # for running the application.
-  # [Optional, default=[]]
-  controllers_active_at_startup:
-    - "joint_state_broadcaster"
-    - "joint_trajectory_controller"
-  # Load but do not start these controllers so they can be activated later if needed.
-  # [Optional, default=[]]
-  controllers_inactive_at_startup:
-    - "servo_controller"
-    - "velocity_force_controller"
-  # Any controllers here will not be spawned by MoveIt Pro.
-  # [Optional, default=[]]
-  controllers_not_managed: []
-  # Optionally configure remapping rules to let multiple controllers receive commands on the same topic.
-  # [Optional, default=[]]
-  controller_shared_topics: []
 
 # Configuration for loading behaviors and objectives.
 # [Required]

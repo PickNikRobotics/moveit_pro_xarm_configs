@@ -34,4 +34,12 @@
     attach_to="world"
   >
   </xacro:picknik_xarm>
+
+  <link name="link_pose_jog"/>
+
+  <joint name="joint_pose_jog" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 -1.57079632679" />
+    <parent link="link_eef" />
+    <child link="link_pose_jog" />
+  </joint>  
 </robot>
