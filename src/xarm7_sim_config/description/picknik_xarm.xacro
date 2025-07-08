@@ -34,18 +34,12 @@
 
   <!-- Robot: contains robot description from the world frame to the tool frame -->
   <xacro:picknik_xarm
-    attach_to="world"
+    attach_to="$(arg attach_to)"
     launch_ros2_control= "$(arg launch_ros2_control)"
+    attach_xyz="$(arg attach_xyz)"
+    attach_rpy="$(arg attach_rpy)"
   >
   </xacro:picknik_xarm>
-
-  <link name="link_pose_jog"/>
-
-  <joint name="joint_pose_jog" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 -1.57079632679" />
-    <parent link="link_eef" />
-    <child link="link_pose_jog" />
-  </joint>
 
   <xacro:if value="$(arg launch_mujoco)">
     <xacro:include filename="$(find xarm7_sim_config)/description/mujoco.ros2_control.xacro" />
