@@ -35,7 +35,7 @@
   <TreeNodesModel>
     <SubTree ID="Move to Pose">
       <input_port name="target_pose" default="{target_pose}" />
-      <input_port name="ik_frame" default="link_tcp" />
+      <input_port name="ik_frame" default="link_eef" />
       <input_port name="planning_group_name" default="xarm7" />
       <input_port
         name="controller_names"

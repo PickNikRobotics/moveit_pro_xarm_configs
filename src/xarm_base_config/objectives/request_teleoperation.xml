@@ -117,7 +117,7 @@
                       controller_names="joint_trajectory_controller"
                       joint_group_name="xarm7"
                       keep_orientation="false"
-                      keep_orientation_link_names="link_tcp"
+                      keep_orientation_link_names="link_eef"
                       keep_orientation_tolerance="0.05"
                       link_padding="0.01"
                       velocity_scale_factor="1.0"

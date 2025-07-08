@@ -17,5 +17,11 @@
       <chain base_link="link_base" tip_link="link_eef"/>
       <joint name="joint_pose_jog" />
   </group>
-
+  <group name="gripper">
+      <link name="link_eef" />
+  </group>
+  <xacro:unless value="$(arg add_gripper)">
+    <!-- Add an end-effector tag for iMarker Teleoperation -->
+    <end_effector name="xarm_gripper" parent_link="link_eef" group="gripper" />
+  </xacro:unless>
 </robot>
