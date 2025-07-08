@@ -34,8 +34,10 @@
 
   <!-- Robot: contains robot description from the world frame to the tool frame -->
   <xacro:picknik_xarm
-    attach_to="world"
+    attach_to="$(arg attach_to)"
     launch_ros2_control= "$(arg launch_ros2_control)"
+    attach_xyz="$(arg attach_xyz)"
+    attach_rpy="$(arg attach_rpy)"
   >
   </xacro:picknik_xarm>
 
