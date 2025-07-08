@@ -17,6 +17,7 @@
       <chain base_link="link_base" tip_link="link_eef"/>
       <joint name="joint_pose_jog" />
   </group>
+  <!-- Add links here if you want them shown at the iMarker pose during Teleoperation -->
   <group name="gripper">
       <link name="link_eef" />
   </group>
