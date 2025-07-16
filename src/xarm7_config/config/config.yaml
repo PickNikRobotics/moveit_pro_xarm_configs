@@ -9,6 +9,7 @@ based_on_package: "xarm_base_config"
 # Baseline hardware configuration parameters for MoveIt Pro.
 # [Required]
 hardware:
+  simulated: False
   # Parameters used to configure the robot description through XACRO.
   # A URDF and SRDF are both required.
   # [Required]
@@ -19,6 +20,8 @@ hardware:
       - name: "xarm7"
       - dof: "7"
       - robot_type: "xarm"
+      - ros2_control_plugin: "uf_robot_hardware/UFRobotSystemHardware"
+      - robot_ip: "0.0.0.0" #USe a real IP here
 
 # Configuration for loading behaviors and objectives.
 # [Required]
