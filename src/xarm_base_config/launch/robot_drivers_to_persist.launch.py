@@ -44,7 +44,7 @@ from moveit_studio_utils_py.system_config import (
 def generate_launch_description():
     system_config_parser = SystemConfigParser()
     hardware_config = system_config_parser.get_hardware_config()
-    controller_config = system_config_parser.get_xarm_base_config_config()
+    controller_config = system_config_parser.get_ros2_control_config()
 
     declare_robot_ip = DeclareLaunchArgument(
         "robot_ip", description="IP address of the robot"
